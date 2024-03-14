@@ -10,7 +10,7 @@ def invia_syn_ack(destinazione, porta, quantita_syn_ack, velocita_syn_ack):
             if (i + 1) % 50 == 0:  
                 print("\033[1;34mSYN/ACK inviato con successo\033[0m")
             else:
-                print("\033[1;32mSYN/ACK packet inviato con successo\033[0m")
+                print("\033[1;32mSYN/ACK => inviato con successo\033[0m")
             time.sleep(velocita_syn_ack)
     except Exception as e:
         print("\033[1;31mSYN/ACK invio fallito: {}\033[0m".format(e))
